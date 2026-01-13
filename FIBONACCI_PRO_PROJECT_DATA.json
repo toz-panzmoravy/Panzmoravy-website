@@ -1,0 +1,59 @@
+{
+  "id": "fibonacci-pro",
+  "title": "Fibonacci_Pro: Smart Trading Intelligence",
+  "titleEn": "Fibonacci_Pro: Smart Trading Intelligence",
+  "shortDescription": "Advanced Auto-Fibonacci Retracement & Signal Engine 2025 • Pine Script v6 (TradingView)",
+  "shortDescriptionEn": "Advanced Auto-Fibonacci Retracement & Signal Engine 2025 • Pine Script v6 (TradingView)",
+  "fullDescription": "Fibonacci_Pro řeší jeden z největších problémů technické analýzy: subjektivitu. Tento indikátor automatizuje kreslení Fibonacciho hladin na základě matematicky definovaných pivotů (ZigZag) a kombinuje je s objemovou a svíčkovou konfirmací.\n\n**Klíčové funkce:**\n\n1. **Auto-Pivot Detection**\n   - ZigZag algoritmus pro automatickou identifikaci nejvýznamnějších High a Low bodů\n   - Dynamické přepočítávání Fibonacciho úrovní při detekci nových pivotů\n   - Eliminace manuálního kreslení a subjektivního výběru pivotů\n\n2. **Smart Signals s Multi-Factor Confirmation**\n   - Generuje BUY/SELL signály pouze při souběhu tří faktorů:\n     • Protnutí klíčové Fib hladiny (např. 0.618 Golden Pocket)\n     • Potvrzení směru svíčkovou formací\n     • Volume Confirmation (volitelné) - Ověření tržního zájmu (Volume > SMA20)\n   - Vizuální indikace zelenými/červenými trojúhelníky\n   - Výrazné snížení počtu falešných signálů (fakeouts)\n\n3. **Dynamic Level Logic**\n   - Flexibilní konfigurace aktivních hladin (Retracements i Extensions)\n   - Adaptace na různé trading styly (Scalping vs. Swing)\n   - Univerzálnost napříč všemi časovými rámci (M1 až Daily)\n\n4. **Built-in Alert System**\n   - Real-time notifikace o vygenerovaných signálech\n   - Konfigurovatelné alert podmínky\n   - Automatizace monitoringu trhu\n\n**Hlavní inovace:**\n\n- **Eliminace subjektivity:** Automatická detekce pivotů zajišťuje objektivní a konzistentní analýzu\n- **Multi-Factor Confirmation:** Kombinace ceny, svíček a objemu pro vyšší spolehlivost\n- **Optimized Rendering:** Optimalizace výkonu pro plynulý chod i na starších zařízeních\n\n**Technologie:** Pine Script v6, ZigZag Algorithms, Quantitative Technical Analysis\n\n**Výsledky:**\n- Konzistentní objektivní analýza\n- Výrazné snížení falešných signálů\n- Univerzální použití napříč aktivy a timeframy\n- Efektivní time management díky automatizaci",
+  "fullDescriptionEn": "Fibonacci_Pro solves one of the biggest problems in technical analysis: subjectivity. This indicator automates the drawing of Fibonacci levels based on mathematically defined pivots (ZigZag) and combines them with volume and candlestick confirmation.\n\n**Key Features:**\n\n1. **Auto-Pivot Detection**\n   - ZigZag algorithm for automatic identification of most significant High and Low points\n   - Dynamic recalculation of Fibonacci levels upon new pivot detection\n   - Elimination of manual drawing and subjective pivot selection\n\n2. **Smart Signals with Multi-Factor Confirmation**\n   - Generates BUY/SELL signals only when three factors converge:\n     • Breakthrough of key Fib level (e.g., 0.618 Golden Pocket)\n     • Direction confirmation by candlestick formation\n     • Volume Confirmation (optional) - Verification of market interest (Volume > SMA20)\n   - Visual indication with green/red triangles\n   - Significant reduction in false signals (fakeouts)\n\n3. **Dynamic Level Logic**\n   - Flexible configuration of active levels (Retracements and Extensions)\n   - Adaptation to different trading styles (Scalping vs. Swing)\n   - Versatility across all timeframes (M1 to Daily)\n\n4. **Built-in Alert System**\n   - Real-time notifications about generated signals\n   - Configurable alert conditions\n   - Market monitoring automation\n\n**Main Innovations:**\n\n- **Subjectivity Elimination:** Automatic pivot detection ensures objective and consistent analysis\n- **Multi-Factor Confirmation:** Combination of price, candles, and volume for higher reliability\n- **Optimized Rendering:** Performance optimization for smooth operation even on older devices\n\n**Technologies:** Pine Script v6, ZigZag Algorithms, Quantitative Technical Analysis\n\n**Results:**\n- Consistent objective analysis\n- Significant reduction in false signals\n- Universal use across assets and timeframes\n- Efficient time management through automation",
+  "impact": "Fibonacci_Pro eliminuje subjektivitu v technické analýze automatizací kreslení Fibonacciho hladin a kombinací multi-factor confirmation (cena, svíčky, objem). Výsledkem je objektivní nástroj, který výrazně snižuje počet falešných signálů a poskytuje konzistentní analýzu napříč všemi časovými rámci a aktivy, čímž zvyšuje disciplínu a efektivitu obchodování.",
+  "impactEn": "Fibonacci_Pro eliminates subjectivity in technical analysis by automating Fibonacci level drawing and combining multi-factor confirmation (price, candles, volume). The result is an objective tool that significantly reduces false signals and provides consistent analysis across all timeframes and assets, increasing trading discipline and efficiency.",
+  "tags": [
+    "Algorithm Development",
+    "Market Geometry",
+    "Volume Analysis",
+    "UX/UI for Traders"
+  ],
+  "year": "2025",
+  "image": "/images/Complexity V3.jpg",
+  "technologies": [
+    "Pine Script v6",
+    "Quantitative Technical Analysis",
+    "ZigZag Algorithms",
+    "TradingView"
+  ],
+  "role": "Algorithm Developer & Financial Analyst",
+  "roleEn": "Algorithm Developer & Financial Analyst",
+  "githubUrl": "",
+  "featured": true,
+  "highlights": [
+    {
+      "title": "Auto-Pivot Detection",
+      "description": "ZigZag algoritmus automaticky identifikuje nejvýznamnější pivoty a dynamicky přepočítává Fibonacciho hladiny, eliminující subjektivitu a manuální chyby",
+      "descriptionEn": "ZigZag algorithm automatically identifies most significant pivots and dynamically recalculates Fibonacci levels, eliminating subjectivity and manual errors"
+    },
+    {
+      "title": "Multi-Factor Confirmation",
+      "description": "Smart Signals vyžadují souběh tří faktorů (protnutí Fib hladiny, svíčková konfirmace, objem), což výrazně snižuje počet falešných signálů",
+      "descriptionEn": "Smart Signals require convergence of three factors (Fib level breakthrough, candlestick confirmation, volume), significantly reducing false signals"
+    },
+    {
+      "title": "Universal Adaptability",
+      "description": "Funguje napříč všemi časovými rámci (M1 až Daily) a aktivy (Krypto, Forex, Akcie), s možností přizpůsobení pro Scalping i Swing trading",
+      "descriptionEn": "Works across all timeframes (M1 to Daily) and assets (Crypto, Forex, Stocks), with ability to adapt for Scalping and Swing trading"
+    },
+    {
+      "title": "Optimized Performance",
+      "description": "Optimalizace výpočetní náročnosti zajišťuje plynulý chod i při analýze dlouhých historických období a na starších zařízeních",
+      "descriptionEn": "Computational complexity optimization ensures smooth operation even when analyzing long historical periods and on older devices"
+    }
+  ],
+  "metrics": {
+    "falseSignalsReduction": "Significant",
+    "universality": "All timeframes & assets",
+    "objectivity": "100% automated",
+    "performance": "Optimized for real-time"
+  }
+}
+
+

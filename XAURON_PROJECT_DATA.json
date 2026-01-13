@@ -1,0 +1,68 @@
+{
+  "id": "xauron-trading-bot",
+  "title": "XAURON - Automatizovaný Trading Bot",
+  "titleEn": "XAURON - Automated Trading Bot",
+  "shortDescription": "Pokročilý automatizovaný trading systém pro XAUUSD s AI integrací a multi-timeframe analýzou",
+  "shortDescriptionEn": "Advanced automated trading system for XAUUSD with AI integration and multi-timeframe analysis",
+  "fullDescription": "XAURON je pokročilý automatizovaný trading systém pro obchodování s XAUUSD (zlato) na platformě MetaTrader 5. Projekt kombinuje pokročilou technickou analýzu, multi-timeframe strategie, AI-asistované rozhodování a komplexní risk management.\n\n**Klíčové funkce:**\n\n1. **Trading Engine**\n   - RULES Strategy s pokročilou obchodní logikou\n   - AI-asistované rozhodování přes LM Studio\n   - Multi-timeframe analýza (M1, M3, M5)\n   - Trend Bias V2 s scoring systémem (-100 až +100)\n   - Counter-trend trading s adaptivní velikostí pozice\n\n2. **Order Management**\n   - Automatická správa pending orders (BUY_STOP/SELL_STOP)\n   - Pending Analyzer pro analýzu existujících pozic\n   - Micro-reversal pro krátkodobé reverzní obchody\n   - Inteligentní konverze orders podle tržních podmínek\n\n3. **Risk Management**\n   - AI Loss Prevention System s aktivním monitoringem\n   - Historical Pattern Analyzer pro učení z minulých ztrát\n   - Enhanced Pre-Entry Filter s agresivní loss prevention\n   - Automatické Stop Loss/Take Profit management\n   - Dynamické position sizing podle síly trendu\n\n4. **Monitoring & Reporting**\n   - Live Dashboard pro real-time monitoring\n   - Comprehensive logging všech akcí\n   - Performance analysis a metriky\n   - System health check\n\n**Hlavní inovace:**\n\n- **Trend Bias V2:** Scoring systém místo binárního rozhodování umožňuje využití 90-95% příležitostí (oproti 60-70% v původní verzi)\n- **AI Loss Prevention:** Komplexní systém prevence ztrát kombinující aktivní monitoring, pattern recognition a pre-entry filtering\n- **Multi-Timeframe Analysis:** Simultánní analýza více časových rámců pro potvrzení signálů a optimalizaci vstupů\n\n**Technologie:** Python 3.8+, MetaTrader5 API, LM Studio, Pandas, NumPy\n\n**Výsledky:**\n- 20-50% více obchodních příležitostí\n- Vyvážený poměr BUY/SELL (blíže k 50/50)\n- Lepší profit factor díky optimalizaci\n- Automatická prevence velkých ztrát",
+  "fullDescriptionEn": "XAURON is an advanced automated trading system for trading XAUUSD (gold) on the MetaTrader 5 platform. The project combines advanced technical analysis, multi-timeframe strategies, AI-assisted decision-making, and comprehensive risk management.\n\n**Key Features:**\n\n1. **Trading Engine**\n   - RULES Strategy with advanced trading logic\n   - AI-assisted decision-making via LM Studio\n   - Multi-timeframe analysis (M1, M3, M5)\n   - Trend Bias V2 with scoring system (-100 to +100)\n   - Counter-trend trading with adaptive position sizing\n\n2. **Order Management**\n   - Automatic pending order management (BUY_STOP/SELL_STOP)\n   - Pending Analyzer for existing position analysis\n   - Micro-reversal for short-term reversal trades\n   - Intelligent order conversion based on market conditions\n\n3. **Risk Management**\n   - AI Loss Prevention System with active monitoring\n   - Historical Pattern Analyzer for learning from past losses\n   - Enhanced Pre-Entry Filter with aggressive loss prevention\n   - Automatic Stop Loss/Take Profit management\n   - Dynamic position sizing based on trend strength\n\n4. **Monitoring & Reporting**\n   - Live Dashboard for real-time monitoring\n   - Comprehensive logging of all actions\n   - Performance analysis and metrics\n   - System health check\n\n**Main Innovations:**\n\n- **Trend Bias V2:** Scoring system instead of binary decision-making enables utilization of 90-95% of opportunities (compared to 60-70% in original version)\n- **AI Loss Prevention:** Comprehensive loss prevention system combining active monitoring, pattern recognition, and pre-entry filtering\n- **Multi-Timeframe Analysis:** Simultaneous analysis of multiple timeframes for signal confirmation and entry optimization\n\n**Technologies:** Python 3.8+, MetaTrader5 API, LM Studio, Pandas, NumPy\n\n**Results:**\n- 20-50% more trading opportunities\n- Balanced BUY/SELL ratio (closer to 50/50)\n- Better profit factor through optimization\n- Automatic prevention of large losses",
+  "impact": "XAURON automatizuje komplexní trading proces kombinující multi-timeframe analýzu, AI-asistované rozhodování a pokročilý risk management. Systém zvyšuje využití obchodních příležitostí o 20-50%, poskytuje vyvážený přístup k BUY/SELL signálům a automaticky předchází velkým ztrátám pomocí AI monitoringu, čímž vytváří disciplinovaný a konzistentní trading systém.",
+  "impactEn": "XAURON automates the complex trading process combining multi-timeframe analysis, AI-assisted decision-making, and advanced risk management. The system increases trading opportunity utilization by 20-50%, provides a balanced approach to BUY/SELL signals, and automatically prevents large losses through AI monitoring, creating a disciplined and consistent trading system.",
+  "tags": [
+    "Python",
+    "Algorithm Development",
+    "AI/ML Integration",
+    "Risk Management",
+    "Financial Trading",
+    "MetaTrader5",
+    "Data Analysis",
+    "Automation"
+  ],
+  "year": "2025",
+  "image": "/images/Complexity V3.jpg",
+  "technologies": [
+    "Python",
+    "MetaTrader5 API",
+    "LM Studio",
+    "Pandas",
+    "NumPy",
+    "AI/ML",
+    "Algorithm Design",
+    "Risk Management",
+    "Real-time Data Processing"
+  ],
+  "role": "Full Stack Developer & Algorithm Designer",
+  "roleEn": "Full Stack Developer & Algorithm Designer",
+  "githubUrl": "https://github.com/toz-panzmoravy/XAURON",
+  "featured": true,
+  "highlights": [
+    {
+      "title": "Trend Bias V2 System",
+      "description": "Scoring systém (-100 až +100) místo binárního rozhodování, umožňuje využití 90-95% obchodních příležitostí oproti původním 60-70%",
+      "descriptionEn": "Scoring system (-100 to +100) instead of binary decision-making, enables utilization of 90-95% of trading opportunities compared to original 60-70%"
+    },
+    {
+      "title": "AI Loss Prevention",
+      "description": "Komplexní systém prevence ztrát s aktivním monitoringem pozic každých 30s, pattern recognition a pre-entry filtering",
+      "descriptionEn": "Comprehensive loss prevention system with active position monitoring every 30s, pattern recognition, and pre-entry filtering"
+    },
+    {
+      "title": "Multi-Timeframe Analysis",
+      "description": "Simultánní analýza M1, M3, M5 časových rámců pro potvrzení signálů a optimalizaci vstupních/výstupních bodů",
+      "descriptionEn": "Simultaneous analysis of M1, M3, M5 timeframes for signal confirmation and entry/exit point optimization"
+    },
+    {
+      "title": "Adaptive Position Sizing",
+      "description": "Dynamické přizpůsobení velikosti pozice podle síly trendu - STRONG trend 130% size, counter-trend 50% size",
+      "descriptionEn": "Dynamic position sizing based on trend strength - STRONG trend 130% size, counter-trend 50% size"
+    }
+  ],
+  "metrics": {
+    "opportunityUtilization": "90-95%",
+    "tradingOpportunitiesIncrease": "20-50%",
+    "buySellRatio": "Balanced (50/50)",
+    "riskReduction": "Automatic loss prevention"
+  }
+}
+
+
