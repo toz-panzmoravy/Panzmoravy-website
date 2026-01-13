@@ -29,7 +29,7 @@ export default function ServicesPage() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <main className="min-h-screen">
+      <main className="min-h-screen pt-28">
         <Navigation />
         <Services />
         <ServicesCTA />

@@ -4,16 +4,21 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Moon, Sun } from "lucide-react"
+import { Menu, X, Moon, Sun, ExternalLink, Copy, Check } from "lucide-react"
 import { useTheme } from "@/components/theme-provider"
 import { useLanguage } from "@/components/language-provider"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSupplementorModalOpen, setIsSupplementorModalOpen] = useState(false)
+  const [isKeyCopied, setIsKeyCopied] = useState(false)
   const { theme, setTheme } = useTheme()
   const { language, setLanguage, t } = useLanguage()
   const pathname = usePathname()
+  
+  const supplementorKey = "kQsCuOinS1C6LDjD"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +43,55 @@ export function Navigation() {
     }
   }
 
+  const handleCopyKey = async () => {
+    try {
+      await navigator.clipboard.writeText(supplementorKey)
+      setIsKeyCopied(true)
+      setTimeout(() => setIsKeyCopied(false), 2000)
+    } catch (err) {
+      console.error("Failed to copy:", err)
+    }
+  }
+
+  const handleProjectClick = (projectName: string, url: string, e: React.MouseEvent) => {
+    if (projectName === "Supplementor") {
+      e.preventDefault()
+      setIsSupplementorModalOpen(true)
+    }
+  }
+
+  const projects = [
+    {
+      name: "Supplementor",
+      url: "https://supplementor.up.railway.app/",
+      nameEn: "Supplementor",
+    },
+    {
+      name: "TaskStorm",
+      url: "https://taskstorm.base44.app/",
+      nameEn: "TaskStorm",
+    },
+    {
+      name: "Table Logic Extractor",
+      url: "https://www.tradingview.com/script/f0wHmYE5-Table-Logic-Extractor/",
+      nameEn: "Table Logic Extractor",
+    },
+    {
+      name: "Complexity",
+      url: "https://www.tradingview.com/script/t3FSg7Ph-Complexity-v3-2/",
+      nameEn: "Complexity",
+    },
+  ]
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-lg border-b border-border shadow-sm" : ""
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-background/90 backdrop-blur-lg border-b border-border shadow-sm" : ""
+        }`}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4 flex-1">
             <Link href="/" className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-lg border border-accent/30 bg-background/10 backdrop-blur-sm shadow-md shadow-accent/10 overflow-hidden hover:border-accent/60 hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 hover:scale-105">
@@ -229,7 +275,133 @@ export function Navigation() {
             </div>
           </div>
         )}
+        </div>
+      </nav>
+
+      {/* Projects Submenu - Always visible */}
+      <div className="fixed top-16 left-0 right-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-start gap-1.5 sm:gap-2 py-1 overflow-x-auto scrollbar-hide">
+            <span className="text-[10px] sm:text-xs text-muted-foreground/70 font-normal whitespace-nowrap mr-1.5">
+              {language === "en" ? "Projects:" : "Projekty:"}
+            </span>
+            {projects.map((project, index) => (
+              <a
+                key={project.url}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => handleProjectClick(project.name, project.url, e)}
+                className="flex items-center gap-1 px-2 py-0.5 rounded-sm bg-accent/5 hover:bg-accent/15 border border-accent/10 hover:border-accent/30 text-accent/80 hover:text-accent text-[10px] sm:text-xs font-normal transition-all duration-200 hover:scale-[1.02] whitespace-nowrap group cursor-pointer"
+              >
+                <span>{language === "en" ? project.nameEn : project.name}</span>
+                <ExternalLink className="h-2.5 w-2.5 opacity-50 group-hover:opacity-80 group-hover:translate-x-0.5 transition-all" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </nav>
+
+      {/* Supplementor Modal */}
+      <Dialog open={isSupplementorModalOpen} onOpenChange={setIsSupplementorModalOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold">
+              {language === "en" ? "How to access Supplementor" : "Jak získat přístup do Supplementor"}
+            </DialogTitle>
+            <DialogDescription className="text-sm text-muted-foreground">
+              {language === "en" 
+                ? "Follow these quick steps to explore the application:" 
+                : "Postupujte podle těchto kroků pro prohlédnutí aplikace:"}
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-4 py-4">
+            {/* Step 1 */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-accent text-accent-foreground text-sm font-semibold">
+                  1
+                </span>
+                <span className="text-sm font-medium">
+                  {language === "en" 
+                    ? "Copy the access key below:" 
+                    : "Zkopírujte přístupový klíč níže:"}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 p-3 rounded-lg bg-muted border border-border">
+                <code className="flex-1 text-sm font-mono text-foreground select-all">
+                  {supplementorKey}
+                </code>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handleCopyKey}
+                  className="h-8 w-8 shrink-0"
+                >
+                  {isKeyCopied ? (
+                    <Check className="h-4 w-4 text-green-500" />
+                  ) : (
+                    <Copy className="h-4 w-4" />
+                  )}
+                </Button>
+              </div>
+              {isKeyCopied && (
+                <p className="text-xs text-green-500 flex items-center gap-1">
+                  <Check className="h-3 w-3" />
+                  {language === "en" ? "Copied!" : "Zkopírováno!"}
+                </p>
+              )}
+            </div>
+
+            {/* Step 2 */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-accent text-accent-foreground text-sm font-semibold">
+                  2
+                </span>
+                <span className="text-sm font-medium">
+                  {language === "en" 
+                    ? "Go to the website and paste the key in the field" 
+                    : "Přejděte na stránku a vložte klíč do pole"}
+                </span>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-accent text-accent-foreground text-sm font-semibold">
+                  3
+                </span>
+                <span className="text-sm font-medium">
+                  {language === "en" ? "Sign in" : "Přihlaste se"}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-end gap-2 pt-4 border-t">
+            <Button
+              variant="outline"
+              onClick={() => setIsSupplementorModalOpen(false)}
+            >
+              {language === "en" ? "Cancel" : "Zrušit"}
+            </Button>
+            <Button
+              variant="default"
+              onClick={() => {
+                window.open("https://supplementor.up.railway.app/", "_blank")
+                setIsSupplementorModalOpen(false)
+              }}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+            >
+              {language === "en" ? "Go to Supplementor" : "Přejít do Supplementor"}
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   )
 }

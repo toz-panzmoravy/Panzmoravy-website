@@ -1,0 +1,48 @@
+# Next.js Static Export - Apache Configuration
+# Tento soubor zajistí správné routování pro statický export Next.js
+
+# Povolit mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Přesměrovat všechny požadavky na index.html (pro client-side routing)
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Komprese pro lepší výkon
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache pro statické soubory
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
+
+# MIME typy
+<IfModule mod_mime.c>
+  AddType application/javascript js
+  AddType text/css css
+</IfModule>
+
+# Zabezpečení
+<IfModule mod_headers.c>
+  # XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+  # Prevent MIME sniffing
+  Header set X-Content-Type-Options "nosniff"
+  # Prevent clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
