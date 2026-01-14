@@ -5,6 +5,9 @@
   "scripts": {
     "build": "next build",
     "build:static": "next build",
+    "build:check": "node scripts/simple-build.js",
+    "build:ftp": "npm run build && npm run build:check && npm run copy:ftp",
+    "copy:ftp": "node scripts/copy-to-ftp.js",
     "export": "next build",
     "dev": "next dev -p 3002",
     "dev:port": "next dev -p 3002",
